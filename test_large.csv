@@ -1,0 +1,51 @@
+merchant,amount,status,reason
+Visa Direct,5200,success,
+Mastercard,15000,success,
+Visa Direct,300,failed,insufficient_funds
+PayPal,8900,success,
+Mastercard,450,failed,timeout
+PayPal,12000,success,
+TBC Pay,2200,success,
+TBC Pay,600,failed,declined
+Visa Direct,11500,success,
+Mastercard,3300,failed,insufficient_funds
+PayPal,750,failed,timeout
+TBC Pay,200,failed,declined
+Visa Direct,4400,failed,card_expired
+Mastercard,900,failed,declined
+PayPal,320,failed,insufficient_funds
+Stripe,14000,success,
+Stripe,670,failed,timeout
+Stripe,2300,success,
+Stripe,480,failed,declined
+Stripe,11000,success,
+BOG Pay,3500,success,
+BOG Pay,150,failed,insufficient_funds
+BOG Pay,8800,success,
+BOG Pay,420,failed,declined
+BOG Pay,1200,success,
+Amex,25000,success,
+Amex,550,failed,card_expired
+Amex,18000,success,
+Amex,700,failed,timeout
+Amex,13000,success,
+Amex,380,failed,declined
+Apple Pay,9500,success,
+Apple Pay,250,failed,insufficient_funds
+Apple Pay,6700,success,
+Apple Pay,410,failed,timeout
+Apple Pay,3100,success,
+Google Pay,7800,success,
+Google Pay,190,failed,declined
+Google Pay,5500,success,
+Google Pay,880,failed,insufficient_funds
+Google Pay,12500,success,
+TBC Pay,4400,success,
+TBC Pay,310,failed,timeout
+Mastercard,6600,success,
+Mastercard,490,failed,card_expired
+Visa Direct,9100,success,
+Visa Direct,270,failed,declined
+PayPal,4200,success,
+PayPal,630,failed,card_expired
+Stripe,7300,success,

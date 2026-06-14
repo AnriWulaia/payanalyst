@@ -50,6 +50,7 @@ def analyze(df: pd.DataFrame) -> dict:
         high_value_rows["reason"] = high_value_rows["reason"].fillna("—")
     high_value = high_value_rows[["merchant", "amount", "status", "reason"] if "reason" in df.columns else ["merchant", "amount", "status"]].to_dict(orient="records")
 
+
     return {
         "total_transactions": int(total),
         "successful": int(success),

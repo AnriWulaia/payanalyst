@@ -16,7 +16,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["payanalyst-production.up.railway.app"],
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
@@ -69,6 +69,7 @@ async def analyze_file(file: UploadFile = File(...)):
 
     prompt = f"""
 You are a senior payments analyst. Analyze this transaction data and write a structured report.
+Use only plain ASCII characters. Use - instead of dashes, if you need to use words with dashes use - it is important.
 
 Data summary:
 - Total transactions: {stats['total_transactions']}
@@ -100,6 +101,9 @@ Be specific, reference the actual failure reasons and merchants by name. No fill
     )
 
     ai_report = response.choices[0].message.content
+    #remove nonascii characters 
+    import re
+    ai_report = re.sub(r'[^\x00-\x7F]+', '-', ai_report)
     pdf_bytes = generate_pdf(stats, ai_report)
 
     return Response(
