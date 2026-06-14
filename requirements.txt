@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pandas
+reportlab
+openai
+python-multipart
+python-dotenv

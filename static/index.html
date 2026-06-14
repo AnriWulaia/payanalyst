@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PayAnalyst by Anri</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+`
+<header>
+  <h1>PayAnalyst</h1>
+  <p>Upload a payments CSV — get an instant AI analyst report with failure breakdown</p>
+</header>
+
+<main>
+  <div class="upload-box" id="uploadBox">
+    <input type="file" id="fileInput" accept=".csv" />
+    <label for="fileInput">
+      <div class="icon">📂</div>
+      <strong>Click to upload a CSV file</strong>
+      <p>or drag and drop here</p>
+      <p class="hint">Required columns: merchant, amount, status &nbsp;|&nbsp; Optional: reason</p>    </label>
+  </div>
+
+  <div style="text-align:center">
+    <button class="btn" id="analyzeBtn" disabled>Generate Report</button>
+  </div>
+  <div class="status" id="status"></div>
+
+  <div class="charts" id="charts">
+    <div class="section-title">Overview</div>
+    <div class="metrics" id="metrics"></div>
+
+    <div class="chart-grid">
+      <div class="chart-card"><h3>Volume by Merchant</h3><canvas id="merchantChart"></canvas></div>
+      <div class="chart-card"><h3>Success vs Failed</h3><canvas id="statusChart"></canvas></div>
+    </div>
+
+    <div class="chart-full">
+      <h3>Failure Reasons Breakdown</h3>
+      <canvas id="reasonChart"></canvas>
+    </div>
+
+    <div class="download-section">
+      <p><strong>Your AI report is ready</strong></p>
+      <small>Includes executive summary, failure analysis, risk flags, and recommendations</small><br/>
+      <button class="btn btn-download" id="downloadBtn">⬇ Download PDF Report</button>
+    </div>
+  </div>
+</main>
+
+  <script src="/static/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+merchant,amount,status,reason
+Visa Direct,5200,success,
+Mastercard,15000,success,
+Visa Direct,300,failed,insufficient_funds
+PayPal,8900,success,
+Mastercard,450,failed,timeout
+PayPal,12000,success,
+TBC Pay,2200,success,
+TBC Pay,600,failed,declined
+Visa Direct,11500,success,
+Mastercard,3300,failed,insufficient_funds
+PayPal,750,failed,timeout
+TBC Pay,200,failed,declined
+Visa Direct,4400,failed,card_expired
+Mastercard,900,failed,declined
+PayPal,320,failed,insufficient_funds
