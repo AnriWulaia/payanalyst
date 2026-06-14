@@ -5,3 +5,4 @@ reportlab
 openai
 python-multipart
 python-dotenv
+slowapi
